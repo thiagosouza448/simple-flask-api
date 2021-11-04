@@ -29,7 +29,7 @@ class Hotel(Resource):
 
     def post(self, hotel_id):
         if HotelModel.find_hotel(hotel_id):
-            return {"message":"hotel id {} already exists.".format(hotel_id)}, 400
+            return {"message":"hotel id {} already exists".format(hotel_id)}, 400
         # elif hotel_id != int:
         #     return {"message": "voce digitou: {}, campo so aceita numeros ".format(hotel_id.upper())}
 
