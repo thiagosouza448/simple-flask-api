@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "c9cb0cff-03aa-47bf-a6ac-9d18bd4f9e48",
+		"name": "API-FLASK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"Aline\",\r\n    \"senha\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/logout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cadastro",
+			"item": [
+				{
+					"name": "/cadastro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\":\"thiago\",\r\n    \"senha\": \"1234\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/cadastro",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/user_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/usuario/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/usuarios/user_id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNTk5NjQ3OCwianRpIjoiYmU4YzY5ZmYtM2ExOC00OTJlLTg1NjktYWNkYjM5MDgzY2JlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjM1OTk2NDc4LCJleHAiOjE2MzU5OTczNzh9.qWM0cvQ2xpzBbjGpFZeAUo5q4Lqw1F2_n8oFOQrm0c0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:5000/usuario/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hoteis",
+			"item": [
+				{
+					"name": "get hoteis",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNTk5NzU0MywianRpIjoiMmM4ZDRhMWItMjZhNi00NTY5LWJmZDEtZTQ5YWJmZjcyNTI4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjM1OTk3NTQzLCJleHAiOjE2MzU5OTg0NDN9.tIg-0A4wrjDFtrPz189aeYJW7l4NUsubK2jBfKpsH_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"nome\": \"a\",\r\n        \"estrelas\": 3.3,\r\n        \"diaria\": 299.10,\r\n        \"cidade\": \"São paulo\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTYzNTk5NjQ3OCwianRpIjoiYmU4YzY5ZmYtM2ExOC00OTJlLTg1NjktYWNkYjM5MDgzY2JlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNjM1OTk2NDc4LCJleHAiOjE2MzU5OTczNzh9.qWM0cvQ2xpzBbjGpFZeAUo5q4Lqw1F2_n8oFOQrm0c0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"nome\": \"TESTE JWT\",\r\n        \"estrelas\": 3.3,\r\n        \"diaria\": 299.10,\r\n        \"cidade\": \"São paulo\"\r\n\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/hoteis/{hotel_id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/hoteis/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"hoteis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
