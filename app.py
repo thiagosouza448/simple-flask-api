@@ -46,6 +46,12 @@ api.add_resource(Site, '/sites/<string:url>')
 api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 
+
+
+
+ 
+
+
 if __name__ == "__main__":
     from sql_alchemy import banco
     banco.init_app(app)
