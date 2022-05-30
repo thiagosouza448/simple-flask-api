@@ -1,1 +1,7 @@
-venv
+venv/
+.idea
+.idea/*
+.pycenfo
+__pycache__/
+venv/
+*/__pycache__/*
