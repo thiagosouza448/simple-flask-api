@@ -18,7 +18,7 @@ class Site(Resource):
     @jwt_required()
     def post(self, url):
         if SiteModel.find_site(url):
-            return {"Message": "The site {} already exists".format(url)}, 400
+            return {"Message": "The site {} already exists.".format(url)}, 400
         site = SiteModel(url)
         try:
             site.save_site()
