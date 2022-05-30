@@ -44,7 +44,6 @@ class UserRegister(Resource):
         return {"message":"user created successfully"}, 201
 
 class UserLogin(Resource):
-
     @classmethod
     def post(cls):
         dados = atributos.parse_args()
