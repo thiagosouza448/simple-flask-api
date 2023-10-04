@@ -6,6 +6,7 @@ from resources.usuario import User, UserLogin, UserRegister, UserLogout
 from resources.site import Sites, Site
 from flask_jwt_extended import JWTManager, get_jwt_header
 from blacklist import BLACKLIST
+from sql_alchemy import banco
 
 # TODO: settings flask database sqlalchemy 
 app = Flask(__name__)
@@ -53,6 +54,5 @@ api.add_resource(UserLogout, '/logout')
 
 
 if __name__ == "__main__":
-    from sql_alchemy import banco
     banco.init_app(app)
     app.run(debug=True)
